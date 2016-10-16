@@ -3,7 +3,21 @@ import {observer} from "mobx-react"
 
 @observer
 export default class TodoList extends React.Component {
-  render() {
-    return <h1>{this.props.store.todos[0]}</h1>
-  }
+	render(){
+		const {todos} = this.props.store
+
+		const todoList = todos.map(items => (
+			<li>{items}</li>
+			))
+ 		return (
+			<div>
+				<h1>todos</h1>
+				<ul>
+					{todoList}
+				</ul>	
+			</div>
+		)
+	}
 }
+
+

@@ -1,11 +1,10 @@
-import {autorun, computed, observable } from "mobx"
+import React from "react"
+import {observable} from 'mobx'
+
 
 class TodoStore {
-    @observable todos = ['Buy Eggs', 'fix Car', 'eggs ballons', 'organic milk']
-    @observable filter = ''
+	@observable todos =['Buy eggs', 'Buy milk', 'Buy chesse', 'Buy apples']
+	@observable filter = ''
 }
 
-var store = window.store = new TodoStore;
-
-export default store
-
+export default new TodoStore
