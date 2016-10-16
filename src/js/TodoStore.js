@@ -29,5 +29,4 @@ class TodoStore {
 		this.todos.replace(incompleteTodos)
 	}
 }
-
 export default new TodoStore
